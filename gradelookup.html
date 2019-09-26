@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+<!-- <!-- <!--  Method 1: --> --> -->
+
+    var rank = prompt('Please enter your grade');
+
+		if(rank<=100 && rank>=90){
+        	alert('Your test result is A');
+		}else if(rank<90 && rank>=80){
+        	alert('Your test result is B');
+        }else if(rank<80 && rank>=70){
+        	alert('Your test result is C')
+        }else if(rank<70 && rank>=60){
+        	alert('Your test result is D');
+        }else if(rank<60 && rank>=0){
+        	alert('You failed this test!');
+        }else {
+        	alert('Not valid enter.Please enter grade from 1 to 100!');
+        }
+     
+
+        
+
+<!-- <!-- <!-- // Method 2: --> --> -->
+
+    var rank = prompt('Please enter your grade');
+      switch(true){
+        case rank<=100&& rank>=90:
+        alert('Your test result is A');
+        break;
+
+        case rank<90 && rank>=80:
+        alert('Your test result is B');
+        break;
+
+        case rank<80 && rank>=70:
+        alert('Your test result is C');
+        break;
+
+        case rank<70 && rank>=60:
+        alert('Your test result is D');
+        break;
+
+        case rank<60 && rank>=0:
+        alert('You failed this test!');
+        break;
+
+        default:
+			  alert('Not valid enter.Please enter grade from 1 to 100!');
+			  break;
+	     
+        }
+
+
+
+          
+	</script>
+</body>
+</html>
