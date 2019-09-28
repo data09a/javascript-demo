@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- creating a html table first as style reference
+ -->	
+    <!-- <table border="1px" width="600px" align="center">
+		<caption><h1>Student Infomation</h1></caption>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Number</th>
+				<th>Class</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+		<tfoot></tfoot>
+	</table> -->
+	<script type="text/javascript">
+		//  array start from here
+
+		var stuArr1 = ['Linda','001','1909'];
+		var stuArr2 = ['Jack','002','1909'];
+		var stuArr3 = ['Jessica','003','1909'];
+		var stuArr4 = ['John','004','1909'];
+		var stuArr5 = ['Jason','005','1909'];
+         
+		var allStuArr =[stuArr1, stuArr2, stuArr3, stuArr4, stuArr5];
+		console.log(allStuArr);
+
+
+        //In the () is the the table style  copy from html table
+		document.write('<table border="1px" width="600px" align="center"><caption><h1>Student Infomation</h1></caption><thead><tr><th>Name</th><th>Number</th><th>Class</th></tr></thead><tbody>');
+		    
+
+		for(var i = 0; i<allStuArr.length; i++){
+		
+			//when index number i is in the range, start printing the first row of the table.
+			document.write('<tr>');
+			console.log(allStuArr[i]);
+			//j is index number of  stuArr.
+			for(var j=0; j<allStuArr[i].length; j++){
+			    //when index number j is in the range, start printing the first content of the table.
+				document.write('<td>'+allStuArr[i][j]+'</td>');
+			}
+			// after printing all information in first row, seal the first row with</tr>
+			document.write('</tr>');
+           
+
+
+		}    
+		 // return to the begining of the for loop start again, until all the information in the range printed out.
+		 //
+		
+
+
+
+		 // In the end, seal the table with the code below: 
+		 
+
+		document.write('</tbody><tfoot></tfoot></table');
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
