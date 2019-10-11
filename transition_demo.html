@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#square{
+			width:200px;
+			height:200px;
+			background-color: red;
+			transition: 2s;
+		}
+
+	/*	#square:hover{
+			background-color:blue;
+			border-radius:50%;
+		}*/
+		
+	</style>
+</head>
+<body>
+      <div id = "square">
+      	
+      </div>
+      <script type="text/javascript">
+      	 var oSquare = document.getElementById('square');
+
+      	 oSquare.onmouseover = function(){
+      	 	oSquare.style.backgroundColor ='blue';
+      	 	oSquare.style.borderRadius ='50%';
+	    }
+	    oSquare.onmouseout = function(){
+	    	oSquare.style.backgroundColor='red';
+	    	oSquare.style.borderRadius='0';
+	    }
+      </script>
+
+</body>
+</html>
