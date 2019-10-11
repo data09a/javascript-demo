@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" id ="myText"><span></span>
+
+	<script type="text/javascript">
+		
+		var oText = document.getElementById('myText');
+		// oText.onkeydown = function(){
+  //            console.log('I enter a key');
+  //        }
+
+         oText.onkeyup = function(){
+         	// console.log('I realease a key');
+         	var inputUser =oText.value;
+         	var reg =/^[0-9]{4}[A-z]{4}$/;
+         	if (inputUser.match(reg) == null){
+         		console.log('It does not match the requirements');
+         		oText.nextElementSibling.innerHTML ='please input 4 numbers +4 letters';
+         		oText.nextElementSibling.style.color='red';
+
+         	}else{
+         		console.log('the input is correct');
+         		oText.nextElementSibling.innerHTML ='It is correct';
+         		oText.nextElementSibling.style.color ='green';
+
+         	}
+         }
+
+         // oText.onkeypress = function(){
+         // 	console.log('I am keep pressing a key');
+         // }
+	</script>
+
+</body>
+</html>
