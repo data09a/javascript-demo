@@ -11,88 +11,93 @@
 		#player{
 			height:50px;
 			width:50px;
-			background-color: red;
+			border-radius:50%;
+			background-color: orange;
 			position: absolute;
-			top:0;
-			left:0;
+			
 		}
 	</style>
 </head>
 <body>
 
-	<div id="player" style="top:0;left:0;">
-		 
+
+
+ 
+	<div id="player" style="top:10px;left:10px;">
+	
 	</div>
 	<script type="text/javascript">
-		var oBody = document.getElementsByTagName('body')[0];
-		// .onmousemove, onmousepress also works 
-		oBody.onclick= function(event){
+
+		
+
+		var objBody = document.getElementsByTagName('body')[0]
+
+
+	
+
+		objBody.onclick =function(event){
+
 			console.log(event);
 			
-			var posX = event.pageX;
-			var posY = event.pageY;
-			var oDiv = document.createElement('div');
-			oDiv.style.height ='10px';
-			oDiv.style.width ='10px';
-			oDiv.style.backgroundColor ='black';
-			oDiv.style.position='absolute';
 
-			oDiv.style.top=posY +'px';
-			oDiv.style.left=posX +'px';
+		    var positionX = event.pageX;
+		    var positionY = event.pageY;
+		    var objDiv = document.createElement('div');
+		    objDiv.style.height = '10px';
+		    objDiv.style.width = '10px';
+		    objDiv.style.backgroundColor ='green';
+		    objDiv.style.position ='absolute';
 
-
-
-			oBody.appendChild(oDiv);
-
-	   }
-
-	   oBody.onkeydown = function(event){
-	   	console.log(event);
-	     // keyCode: up:38 , down:40 , left:37, right:39
-
-	     var oPlayer = document.getElementById('player')
-	     switch(event.keyCode){
-	     	case 39:
-	     	var oldX = parseInt(oPlayer.style.left);
-	     	oldX+=10;
-	     	oPlayer.style.left = oldX +'px';
-	     	break;
+		   objDiv.style.top = positionY + 'px';
+		   objDiv.style.left = positionX +'px';
 
 
 
-	   
-	     	case 37:
-	     	var oldXleft = parseInt(oPlayer.style.left);
-	     	oldXleft-=10;
-	     	oPlayer.style.left = oldXleft +'px';
-	     	break;
+		   objBody.appendChild(objDiv);
+        }
 
-	     	case 40:
-	     	var oldY = parseInt(oPlayer.style.top);
-	     	oldY+=10;
-	     	oPlayer.style.top= oldY +'px';
-	     	break;
-
-	     	case 38:
-	     	var oldYup = parseInt(oPlayer.style.top);
-	     	oldYup-=10;
-	     	oPlayer.style.top= oldYup +'px';
-	     	break;
-
-
-	    }
-	    
+        objBody.onkeydown = function(event){
+        	console.log(event);
 
 
 
-	     // console.log(oPlayer.style.top);
-	     // var oldY = parseInt(oPlayer.style.top);
-	     // oldY++;
+            var objPlayer = document.getElementById('player')
+            switch(event.keyCode){
+            	case 38:
+            	var preY = parseInt(objPlayer.style.top);
+            	preY -=10;
+            	objPlayer.style.top = preY +'px';
+            	break;
+
+            	case 40:
+            	var preY = parseInt(objPlayer.style.top);
+            	preY +=10;
+            	objPlayer.style.top = preY + 'px';
+            	break;
+
+            	case 37:
+            	var preX = parseInt(objPlayer.style.left);
+            	preX -=10;
+            	objPlayer.style.left = preX + 'px';
+            	break;
+
+            	case 39:
+            	var preX = parseInt(objPlayer.style.left);
+            	preX +=10;
+            	objPlayer.style.left = preX +'px';
+            	break;
+
+            }
+         
+
+
+        }
 
 
 
-	   }
 
+
+		
 
 
 	</script>
