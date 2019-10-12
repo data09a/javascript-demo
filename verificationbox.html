@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" name="" id="veriBox" placeholder="enter verification code">
+	<span id="veriCode" onclick="veriCode()"></span>
+
+	<input type="button" name="" id = "btn" value="click here">
+
+
+	<script type="text/javascript">
+		
+
+            function veriCode(){
+            	// console.log(Math.random());
+
+				var str = '0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm'
+
+        		var box ='';
+				for(var i= 0; i<4; i++){
+					var randomNo = parseInt(Math.random()*str.length);
+
+					box+= str[randomNo];
+     	    	}
+		    console.log(box);
+            	document.getElementById('veriCode').innerHTML = box;
+
+            	
+        }	veriCode();
+
+        var objBth = document.getElementById('btn');
+        objBth.onclick = function(){
+
+             var inPut = document.getElementById('veriBox').value;
+             var box   = document.getElementById('veriCode').innerHTML;
+
+             var newInput = inPut.toUpperCase();
+             var newBox = box.toUpperCase();
+             console.log(newInput);
+             console.log(newBox);
+                 if(newInput == newBox){
+                 	alert('true');
+                 }  else alert('false');
+
+             }
+
+             
+
+
+		
+		// console.log(randomNo);
+		// console.log(str[randomNo]);
+
+	</script>
+
+</body>
+</html>
